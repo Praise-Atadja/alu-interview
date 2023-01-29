@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """
-A method that calculates the fewest number of operations needed to result in exactly n H characters in the file.
+Calculates the fewest number of operations
 """
+
+
 def minOperations(n):
     mn = 0
     div = 2
@@ -11,3 +13,4 @@ def minOperations(n):
             n = int(n / div)
         div += 1
     return mn
+
