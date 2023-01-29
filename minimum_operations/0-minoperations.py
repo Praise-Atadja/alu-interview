@@ -13,4 +13,3 @@ def minOperations(n):
             n = int(n / div)
         div += 1
     return mn
-
