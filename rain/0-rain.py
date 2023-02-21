@@ -8,16 +8,17 @@ def rain(walls):
 
     if len(walls) == 0:
         return 0
-    
-    bar_right = 0 # height of tallest bar on right
-    bar_left = 0 # height of tallest bart on the left
-    amount_water = 0 # total amount of water retained
+    bar_left, bar_right = 0, len(walls) - 1
+    bar_leftMax, bar_rightMax = walls[bar_left], walls[bar_right]
+    amount_water = 0
 
-    for height in range(1, len(walls) - 1):
-        bar_Left = max(walls[:height])
-        bar_ight = max(walls[height+1:])
-
-        reservoir = min(bar_left, bar_right) - walls[height]
-        amount_water += max(0, reservoir)
+    while bar_left < bar_right:
+        if bar_leftMax < bar_rightMax:
+            bar_left += 1
+            bar_leftMax = max(bar_leftMax, walls[bar_left])
+            amount_water += bar_leftMax - walls[bar_left]
+        else:
+            bar_right -= 1
+            bar_rightMax = max(bar_rightMax, walls[bar_right])
+            amount_water += bar_rightMax - walls[bar_right]
     return amount_water
-
