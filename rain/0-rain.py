@@ -4,6 +4,7 @@
 
 def rain(walls):
 
+
     "function that calculates the rainwater retained"
 
     if len(walls) == 0:
