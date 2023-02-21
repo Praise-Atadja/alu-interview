@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""How many square units of water will be retained after it rains, assuming that the ends of the list (before index 0 
-and after index walls[-1]) are not walls, meaning they will not retain water."""
+"""How many square units of water will be retained after it rains."""
 
 def rain(walls):
     "function that calculates the rainwater retained"
+
 
     if len(walls) == 0:
         return 0
@@ -22,3 +22,4 @@ def rain(walls):
             bar_rightMax = max(bar_rightMax, walls[bar_right])
             amount_water += bar_rightMax - walls[bar_right]
     return amount_water
+    
