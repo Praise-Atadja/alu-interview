@@ -2,8 +2,8 @@
 
 """How many square units of water will be retained after it rains."""
 
-def rain(walls):
 
+def rain(walls):
 
     "function that calculates the rainwater retained"
 
