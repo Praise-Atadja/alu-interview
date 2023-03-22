@@ -4,16 +4,16 @@
 
 def pascal_triangle(n):
     """Function that returns a list of lists of integers"""
-    first_list = []
+    first = []
     if (n <= 0):
-        return first_list
+        return first
     for i in range(1, (n + 1)):
-        second_list = []
+        second = []
         for j in range(i):
-            second_list.append(1)
-        first_list.append(second_list)
-    for i in range(len(first_list)):
+            second.append(1)
+        first.append(second)
+    for i in range(len(first)):
         for j in range(i):
             if j != 0:
-             first_list[i][j] = first_list[i - 1][j] + first_list[i - 1][j - 1]
-    return first_list
+             first[i][j] = first[i - 1][j] + first[i - 1][j - 1]
+    return first
