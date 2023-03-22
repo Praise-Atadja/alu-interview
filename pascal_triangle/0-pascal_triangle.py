@@ -15,5 +15,5 @@ def pascal_triangle(n):
     for i in range(len(first)):
         for j in range(i):
             if j != 0:
-             first[i][j] = first[i - 1][j] + first[i - 1][j - 1]
+                first[i][j] = first[i - 1][j] + first[i - 1][j - 1]
     return first
